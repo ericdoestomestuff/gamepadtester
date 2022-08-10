@@ -191,7 +191,7 @@ function onOff(v) {
   return v ? t : f;
 }
 
-const keys = ['index', 'id', 'connected', 'mapping', /*'timestamp'*/];
+const keys = ['index', 'id', 'connected', 'mapping', 'timestamp'*/];
 function processController(info) {
   const {elem, gamepad, axes, buttons} = info;
   const lines = [`gamepad  : ${gamepad.index}`];
