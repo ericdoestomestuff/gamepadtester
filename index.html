@@ -191,7 +191,7 @@ function onOff(v) {
   return v ? t : f;
 }
 
-const keys = ['index', 'id', 'connected', 'mapping', 'timestamp'*/];
+const keys = ['index', 'id', 'connected', 'mapping', /*'timestamp'*/];
 function processController(info) {
   const {elem, gamepad, axes, buttons} = info;
   const lines = [`gamepad  : ${gamepad.index}`];
@@ -208,6 +208,7 @@ function processController(info) {
     const button = gamepad.buttons[ndx];
     circle.setAttributeNS(null, 'r', button.value * fudgeFactor);
     circle.setAttributeNS(null, 'fill', button.pressed ? 'red' : 'gray');
+    console.log('test');
     value.textContent = `${button.value.toFixed(2)}`;
   });
   
